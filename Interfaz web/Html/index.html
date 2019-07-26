@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Nueva denuncia de PNC</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../Estilos/NuevaDenuncia.css">
+	<link rel="stylesheet" type="text/css" href="../Estilos/Comunes.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../Lógica de UI/ScriptPrincipal.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Subsistema de denuncias de PNC</h1>
+		<nav>
+			<a href="index.html" class="tabSelec">Nueva denuncia</a>
+			<a href="Gestionar.php">Gestionar</a>
+			<a href="">Miembros</a>
+		</nav>
+	</header>
+	<section>
+		<article id="nuevaDenunciaPnc">		
+			<form action="ResultadoNuevaDenuncia.php" method="post" id="nuevaDenuncia" autocomplete="off" accept-charset="utf-8">
+				<h2>Datos personales</h2>
+				
+				<input type="text" name="nombre" placeholder="Nombre" title="Nombre" required><br>
+				
+				<input type="text" name="apellido" placeholder="Apellido" title="Apellido" required><br>
+				
+				<input type="tel" name="edad" placeholder="Edad" title="Edad: sólo números y menos de 4 dígitos" pattern="[0-9]{1,3}" required><br>
+				
+				<input type="tel" name="dni" placeholder="DNI" title="DNI: sólo números y más de 7 dígitos" pattern="[0-9]{8,}" required><br>
+				
+				<input type="tel" name="telefono" placeholder="Teléfono" title="Teléfono: sólo números y más de 5 dígitos" pattern="[0-9]{6,}" required>&nbsp;&nbsp;
+				<label>Tipo: </label>
+				<input type="radio" name="tipoTelefono" value="Celular" checked>Celular&nbsp;&nbsp;
+				<input type="radio" name="tipoTelefono" value="Fijo">Fijo<br>
+
+				
+				<input type="email" name="email" placeholder="Correo electrónico" title="Correo electrónico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+				
+				<input type="text" name="pais" placeholder="País" title="País" required><br>
+				
+				<input type="text" name="provinciaOestado" placeholder="Provincia/Estado" title="Provincia/Estado" required><br>
+				
+				<input type="text" name="ciudad" placeholder="Ciudad" title="Ciudad" required><br>
+				
+				<input type="text" name="barrio" placeholder="Barrio" title="Barrio" required><br><br><br><br>
+				
+				<h2>Denuncia</h2>
+
+				<label>¿Usted es la víctima o es otra persona?:</label><br>
+				<input type="radio" name="esvictima" value="SI" checked>Yo soy la víctima&nbsp;&nbsp;
+				<input type="radio" name="esvictima" value="NO" >Es otra persona
+				<br><br><br>
+
+				<textarea rows="5" cols="40" name="descripcion" title="Descripción breve del hecho" placeholder="Descripción breve del hecho" id="descripcion" form="nuevaDenuncia">
+				</textarea><br><br>
+
+				<label>Página/s que denuncia:</label><br>
+				<input type="text" name="pagina" placeholder="ejemplo.com" required><br>
+				<input type="text" name="pagina2" placeholder="ejemplo2.com" ><br>
+				<input type="text" name="pagina3" placeholder="ejemplo3.com" ><br>
+				<input type="text" name="pagina4" placeholder="ejemplo4.com" ><br>
+				<input type="text" name="pagina5" placeholder="ejemplo5.com" ><br>
+				<!--<span id="agregar" class="boton">Agregar otra</span><br>-->
+				<div id="masPaginas"></div>
+				<br>
+
+				<label>Requiere asistencia por: </label><br>
+				<input type="radio" name="asistencia" value="ABOGADO" checked>Abogado&nbsp;&nbsp;
+				<input type="radio" name="asistencia" value="PSICOLOGO">Psicólogo&nbsp;&nbsp;
+				<input type="radio" name="asistencia" value="OTRO PROFESIONAL">Otro profesional
+				<br><br>
+
+				<label>¿Denunció ante la policía?: </label><br>
+				<input type="radio" name="denuncia_policia" value="NO" checked>No&nbsp;&nbsp;
+				<input type="radio" name="denuncia_policia" value="SI">Sí
+				<br><br>
+
+				<label>¿Ya se le brindó asesoramiento?:</label><br>
+				<input type="radio" name="asesoramiento" value="NO" checked>No&nbsp;&nbsp;
+				<input type="radio" name="asesoramiento" value="SI">Sí
+				<br><br>
+
+				<label>¿Conoce al perpetrador del hecho?:</label><br>
+				<input type="radio" name="perpetrador" value="NO" checked>No&nbsp;&nbsp;
+				<input type="radio" name="perpetrador" value="SI">Sí
+				<br><br>
+
+				<label>¿Usted sabe como se obtubieron las imágenes, videos y/o textos?</label><br>
+				<input type="radio" name="proceder_perpetrador" value="NO" checked>No&nbsp;&nbsp;
+				<input type="radio" name="proceder_perpetrador" value="SI">Sí
+
+				<br><br><br>
+
+				<input class="boton" type="submit" name="enviar" value="Enviar" id="enviar">
+			</form>
+		</article>
+	</section>
+</body>
+</html>
