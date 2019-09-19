@@ -1,0 +1,30 @@
+.resultados div{
+	max-height: 400px;
+	overflow: auto;
+}
+table{
+	display: inline-block;
+	background-color: #fff;
+	padding: 3px;
+}
+td{
+	padding: 8px;
+}
+tr:nth-child(even) {
+	background: #fff;
+}
+tr:nth-child(odd) {
+	background: #eee;
+}
+.abrir:hover{
+	background-color: #ff7;
+	cursor: pointer;
+}
+.eliminar{
+	background-color: #faa;
+	cursor: pointer;
+}
+.eliminar:hover{
+	background-color: #fbb;
+	cursor: pointer;
+}

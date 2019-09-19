@@ -2,20 +2,19 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8"/>
-	<title>Nueva denuncia de PNC</title>
+	<title>Eliminar miembro</title>
 	<link rel="stylesheet" type="text/css" href="../Estilos/Comunes.css">
 </head>
 <body>
 	<header>
-		<h1>Nueva denuncia de PNC</h1>
+		<h1>Eliminar miembro</h1>
 	</header>
 	<div>
 		<?php
-			require "../../Logica de la ONG/CreadorDenuncia.php"
+			require "../../Logica de la ONG/EliminadorMiembro.php";
 		?>
 	<br><br><br><br>
-	<a class="boton" href="index.html">Volver</a>
+	<a class="boton" href="Miembros.php">Aceptar</a>
 	</div>
-	
 </body>
 </html>

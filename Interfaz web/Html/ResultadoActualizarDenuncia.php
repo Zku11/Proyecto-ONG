@@ -2,20 +2,19 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8"/>
-	<title>Nueva denuncia de PNC</title>
+	<title>Actualizar denuncia de PNC</title>
 	<link rel="stylesheet" type="text/css" href="../Estilos/Comunes.css">
 </head>
 <body>
 	<header>
-		<h1>Nueva denuncia de PNC</h1>
+		<h1>Actualizar denuncia de PNC</h1>
 	</header>
 	<div>
 		<?php
-			require "../../Logica de la ONG/CreadorDenuncia.php"
+			require "../../Logica de la ONG/EditorDenuncia.php";
 		?>
 	<br><br><br><br>
-	<a class="boton" href="index.html">Volver</a>
+	<a class="boton" href=<?php echo EditorDenuncia::$idDenunciaPublico ?> >Aceptar</a>
 	</div>
-	
 </body>
 </html>

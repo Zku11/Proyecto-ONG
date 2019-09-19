@@ -1,0 +1,25 @@
+input{
+	border: none;
+	background-color: #eee;
+	color: #000;
+}
+.noEditable{
+	background-color: #eee;
+}
+input:focus{
+	background-color: #fff;
+}
+.boton{
+	text-decoration: none;
+	float: right;
+	margin: 0.3em 0.6em;
+}
+#eliminar{
+	background-color: #f99;
+}
+#eliminar:hover{
+	background-color: #faa;
+}
+span{
+	color:#ff8;
+}

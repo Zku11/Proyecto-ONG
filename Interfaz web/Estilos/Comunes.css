@@ -3,8 +3,20 @@
 	padding: 0;
 	font-family: helvetica;
 }
+section{
+	text-align: center;
+}
 body{
 	min-width: 1000px;
+}
+body > div{
+	text-align: center;
+	margin: 50px 100px;
+	padding: 20px 0;
+	background-color: #eee;
+}
+a{
+	text-decoration: none;
 }
 header{
 	position: sticky;
@@ -37,25 +49,37 @@ nav a{
 	padding: 10px 10px 20px 10px;
 	text-decoration: none;
 	color: #fff;
+	-webkit-border-radius: 0.3em 0.3em 0 0;
+	-moz-border-radius: 0.3em 0.3em 0 0;
+	border-radius: 0.3em 0.3em 0 0;
 }
-nav a:hover, .tabSelec{
+nav a:hover{
 	color: #333;
+	background-color: #eee;
+}
+footer a{
+	text-decoration: none;
+}
+.tabSelec{
 	background-color: #fff;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 10px 10px 0 0;
+	color: #333;
+}
+.limpiador{
+	clear: both;
 }
 .boton{
 	font-size: 1em;
 	background-color: #ffd633;
 	padding: 0.8em;
-	margin: 0;
 	height: inherit;
 	color: #333;
 	border: 1px solid #777;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
+	-moz-box-shadow: 1px 1px 4px #555;
+	-webkit-box-shadow: 1px 1px 4px #555;
+	box-shadow: 1px 1px 4px #555;
 }
 .boton:hover{
 	cursor: pointer;
@@ -74,13 +98,95 @@ form, .resultados{
 	border-radius: 15px;
 	border: 2px solid #bbb;
 }
+.resultados{
+	margin-bottom: 8em;
+}
+footer{
+	text-align: right;
+	position: fixed;
+	bottom: 0;
+	width: 98%;
+	padding: 1%;
+	background-color: #fff;
+	-moz-box-shadow: 1px -5px 5px #fff;
+	-webkit-box-shadow: 1px -5px 5px #fff;
+	box-shadow: 1px -5px 5px #fff;
+}
+footer form{
+	border-radius: 0px;
+	border: none;
+	margin: 0;
+	background-color: #fff;
+	padding: 0;
+}
+footer input, p, form{
+	display: inline-block;
+}
+footer input{
+	border: none;
+	color: #f33;
+	background-color: #fff;
+}
+footer input:hover{
+	cursor: pointer;
+	color: #f66;
+}
+footer a{
+	color: #f80;
+}
+footer a:hover{
+	color: #fa0;
+}
 input, textarea{
 	display: inline-block;
 	margin: 6px 0;
 	height: 1.4em;
 	font-size: 1em;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
 	border: 2px solid #bbb;
+}
+input[type="radio"]{
+	cursor: pointer;
+	display: inline-block;
+	height: 0.9em;
+	z-index: 0;
+}
+label{
+	display: inline-block;
+	margin: 8px 0;
+}
+textarea{
+	min-height: 10em;
+	max-height: 20em;
+	min-width: 20em;
+	max-width: 30em;
+}
+@media (orientation:portrait){
+	form, .resultados{
+		margin: 2%;
+		width: inherit;
+		display: block;
+	}
+	.resultados{
+		margin-bottom: 7em;
+	}
+	body{
+		font-size: 2.5em;
+	}
+	header{
+		text-align: center;
+		position: inherit;
+	}
+	nav{
+		float: none;
+		padding-top: 1em;
+	}
+	input[type="radio"]{
+		-ms-transform: scale(3);
+    	-webkit-transform: scale(3); 
+    	transform: scale(3);
+    	margin: 0.5em;
+	}
 }
